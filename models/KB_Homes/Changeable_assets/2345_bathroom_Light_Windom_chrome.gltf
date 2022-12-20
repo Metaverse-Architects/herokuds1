@@ -1,0 +1,290 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "w nickel"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "White_metal",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Lamp_black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "white",
+            "pbrMetallicRoughness" : {
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.069",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 2
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "sfekebvc_2K_Albedo",
+            "uri" : "textures/sfekebvc_2K_Albedo.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 343,
+            "max" : [
+                -24.476909637451172,
+                7.735592365264893,
+                38.12531661987305
+            ],
+            "min" : [
+                -38.762725830078125,
+                3.380990505218506,
+                26.314668655395508
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 343,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 343,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 540,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 4182,
+            "max" : [
+                -24.545429229736328,
+                7.639130115509033,
+                38.05719757080078
+            ],
+            "min" : [
+                -38.7038459777832,
+                3.415048599243164,
+                26.138919830322266
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 4182,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4182,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 11052,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 4468,
+            "max" : [
+                -24.502925872802734,
+                7.872873783111572,
+                38.02909851074219
+            ],
+            "min" : [
+                -38.74733352661133,
+                3.553152084350586,
+                26.0950870513916
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 4468,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 4468,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 11556,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 4116,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4116,
+            "byteOffset" : 4116,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2744,
+            "byteOffset" : 8232,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1080,
+            "byteOffset" : 10976,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 50184,
+            "byteOffset" : 12056,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 50184,
+            "byteOffset" : 62240,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 33456,
+            "byteOffset" : 112424,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 22104,
+            "byteOffset" : 145880,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 53616,
+            "byteOffset" : 167984,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 53616,
+            "byteOffset" : 221600,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 35744,
+            "byteOffset" : 275216,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 23112,
+            "byteOffset" : 310960,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 334072,
+            "uri" : "2345_bathroom_Light_Windom_chrome.bin"
+        }
+    ]
+}

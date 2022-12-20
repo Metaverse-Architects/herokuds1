@@ -1,0 +1,126 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Oden Midnight Black",
+            "translation" : [
+                0,
+                -0.4182242155075073,
+                0
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Black_lamp",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.0023219799622893333,
+                    0.0023219799622893333,
+                    0.0023219799622893333,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 1122,
+            "max" : [
+                -14.13572883605957,
+                4.02455997467041,
+                22.359464645385742
+            ],
+            "min" : [
+                -18.076143264770508,
+                2.8852317333221436,
+                22.053823471069336
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 1122,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 1122,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 4950,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 13464,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13464,
+            "byteOffset" : 13464,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8976,
+            "byteOffset" : 26928,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 9900,
+            "byteOffset" : 35904,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 45804,
+            "uri" : "1860_kitchen_Light_OdenMidnightBlack.bin"
+        }
+    ]
+}

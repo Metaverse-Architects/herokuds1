@@ -1,0 +1,585 @@
+/*
+
+The designStudio shall include:
+-= The DesignStudio UI framework
+=- An implemented furnitureSystem; inbuilt within the same class system
+
+
+ToDos:
+- set up UI system; copy in the coordinates of the UI system, including back and forth
+
+
+
+*/
+
+import { TriggerDoor } from "src/triggerDoor"
+import { bathroom_flooring, bathroom_lights, bathroom_walltile, designStudioCanvas, kitchen_faucets, kitchen_flooring } from "./database"
+
+import { bathroom_faucets, kitchen_cabinets, kitchen_countertops, kitchen_ligthing } from "./database"
+
+export const bathroomMenuCanvas = new UICanvas()
+export const kitchenMenuCanvas = new UICanvas()
+
+export class designStudio extends Entity{
+
+    public house = new Entity()
+    public yard = new Entity()
+    public fixture = new Entity()
+    public floor = new Entity()
+    public tdoor = new TriggerDoor()
+    public studioPlaceHolder1 = bathroom_faucets[0]
+    public studioPlaceHolder2 = bathroom_faucets[1]
+    public studioPlaceHolder3 = kitchen_countertops[2]
+
+    public loopLength 
+    public placeHolderBack 
+    public placeHolderFront 
+    public placeHolderMid 
+    public placeHolderMax 
+    public placeHolderMin 
+
+    public arrayChoice
+
+    public furnitureHolder = new Entity()
+
+    public bathroom_faucet_holder = new Entity()
+    public bathroom_flooring_holder = new Entity()
+    public bathroom_lighting_holder = new Entity()
+    public bathroom_wallTile_holder = new Entity()
+
+    public kitchen_faucet_holder = new Entity()
+    public kitchen_flooring_holder = new Entity()
+    public kitchen_lighting_holder = new Entity()
+    public kitchen_cabinets_holder = new Entity()
+    public kitchen_countertops_holder = new Entity()
+    public kitchen_sink_holder = new Entity()
+    public middleMenu = new UIImage(bathroomMenuCanvas, new Texture(''))
+    public farleftMenu2 = new UIImage(kitchenMenuCanvas, new Texture(''))
+    public middlerightMenu = new UIImage(kitchenMenuCanvas, new Texture(''))
+    public middleleftMenu = new UIImage(kitchenMenuCanvas, new Texture(''))
+    public farrightMenu = new UIImage(kitchenMenuCanvas, new Texture(''))
+    public farleftMenu = new UIImage(kitchenMenuCanvas, new Texture(''))
+           
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    constructor(){
+        super()
+        this.house.addComponent(new GLTFShape('models/KB_Homes/KBH_Interior_model1860_MainGeo.glb'))
+        this.floor.addComponent(new GLTFShape('models/KB_Homes/design_studio_models/kitchen_floor/KBH_Interior_model1860_FloorMain1.glb'))
+        this.yard.addComponent(new GLTFShape('models/KB_Homes/KBH_Interior_model1860_Yard.glb'))
+        this.fixture.addComponent(new GLTFShape('models/KB_Homes/KBH_Interior_model1860_fixtures.glb'))
+        engine.addEntity(this.house)
+        engine.addEntity(this.floor)
+        engine.addEntity(this.yard)
+        engine.addEntity(this.fixture)
+        this.furnitureTransformSetter()
+
+        this.kitchenMenu()
+        this.createTDoors()
+    }
+    createTDoors(){
+         this.tdoor.addComponentOrReplace(new Transform ({position: new Vector3(20.18,0.88,17.50)})) 
+         this.tdoor.setParent(this)
+         this.tdoor.onCameraEnter = () => {
+            //kitchenMenuCanvas.visible = false
+            this.bathroomMenu()
+         }
+         this.tdoor.onCameraExit = () => {
+            kitchenMenuCanvas.visible = true
+            this.kitchenMenu()
+         }
+         
+
+              
+     }
+    bathroomMenu(){
+        if(kitchenMenuCanvas.visible == true){
+            kitchenMenuCanvas.visible = false
+            this.middleMenu.visible = false
+            this.farleftMenu2.visible = false
+            this.farleftMenu.visible = false
+            this.farrightMenu.visible = false
+            this.middleleftMenu.visible = false
+            this.middlerightMenu.visible = false
+        }
+    
+        this.middleMenu = new UIImage(bathroomMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Bathroom_Catagories/KBHOMES_ChoicesUI-60.png'))
+        this.middleMenu.width = "10%"
+        this.middleMenu.height = "6%"
+        this.middleMenu.sourceWidth = 564
+        this.middleMenu.sourceHeight = 168
+        this.middleMenu.vAlign = "top"
+        this.middleMenu.positionX = "0%"
+        this.middleMenu.positionY = "10%"
+        this.middleMenu.opacity = 1
+        this.middleMenu.visible = true
+        this.middleMenu.isPointerBlocker = true
+
+        this.middlerightMenu = new UIImage(bathroomMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Bathroom_Catagories/KBHOMES_ChoicesUI-61.png'))
+        this.middlerightMenu.width = "10%"
+        this.middlerightMenu.height = "6%"
+        this.middlerightMenu.sourceWidth = 564
+        this.middlerightMenu.sourceHeight = 168
+        this.middlerightMenu.vAlign = "top"
+        this.middlerightMenu.positionX = "12%"
+        this.middlerightMenu.positionY = "10%"
+        this.middlerightMenu.opacity = 1
+        this.middlerightMenu.visible = true
+        this.middlerightMenu.isPointerBlocker = true
+
+       this.middleleftMenu = new UIImage(bathroomMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Bathroom_Catagories/KBHOMES_ChoicesUI-63.png'))
+       this.middleleftMenu.width = "10%"
+       this.middleleftMenu.height = "6%"
+       this.middleleftMenu.sourceWidth = 564
+       this.middleleftMenu.sourceHeight = 168
+       this.middleleftMenu.vAlign = "top"
+       this.middleleftMenu.positionX = "-12%"
+       this.middleleftMenu.positionY = "10%"
+       this.middleleftMenu.opacity = 1
+       this.middleleftMenu.visible = true
+       this.middleleftMenu.isPointerBlocker = true
+
+        this.farrightMenu = new UIImage(bathroomMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Bathroom_Catagories/KBHOMES_ChoicesUI-64.png'))
+        this.farrightMenu.width = "10%"
+        this.farrightMenu.height = "6%"
+        this.farrightMenu.sourceWidth = 564
+        this.farrightMenu.sourceHeight = 168
+        this.farrightMenu.vAlign = "top"
+        this.farrightMenu.positionX = "24%"
+        this.farrightMenu.positionY = "10%"
+        this.farrightMenu.opacity = 1
+        this.farrightMenu.visible = true
+        this.farrightMenu.isPointerBlocker = true
+
+        this.farleftMenu = new UIImage(bathroomMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Bathroom_Catagories/KBHOMES_ChoicesUI-65.png'))
+        this.farleftMenu.width = "10%"
+        this.farleftMenu.height = "6%"
+        this.farleftMenu.sourceWidth = 564
+        this.farleftMenu.sourceHeight = 168
+        this.farleftMenu.vAlign = "top"
+        this.farleftMenu.positionX = "-24%"
+        this.farleftMenu.positionY = "10%"
+        this.farleftMenu.opacity = 1
+        this.farleftMenu.visible = true
+        this.farleftMenu.isPointerBlocker = true
+
+
+
+    }
+
+    kitchenMenu(){
+        if(bathroomMenuCanvas.visible == true){
+            bathroomMenuCanvas.visible = false
+            this.middleMenu.visible = false
+            this.farleftMenu2.visible = false
+            this.farleftMenu.visible = false
+            this.farrightMenu.visible = false
+            this.middleleftMenu.visible = false
+            this.middlerightMenu.visible = false
+        }
+
+        //Flooring
+        this.middleMenu = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-50.png'))
+        this.middleMenu.width = "10%"
+        this.middleMenu.height = "6%"
+        this.middleMenu.sourceWidth = 564
+        this.middleMenu.sourceHeight = 168
+        this.middleMenu.vAlign = "top"
+        this.middleMenu.positionX = "0%"
+        this.middleMenu.positionY = "10%"
+        this.middleMenu.opacity = 1
+        this.middleMenu.visible = true
+        this.middleMenu.isPointerBlocker = true
+        this.middleMenu.onClick = new OnPointerDown(()=>{
+            this.uiCycleData(kitchen_flooring)
+        })
+ 
+        //Cabinets
+        this.middlerightMenu = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-51.png'))
+        this.middlerightMenu.width = "10%"
+        this.middlerightMenu.height = "6%"
+        this.middlerightMenu.sourceWidth = 564
+        this.middlerightMenu.sourceHeight = 168
+        this.middlerightMenu.vAlign = "top"
+        this.middlerightMenu.positionX = "12%"
+        this.middlerightMenu.positionY = "10%"
+        this.middlerightMenu.opacity = 1
+        this.middlerightMenu.visible = true
+        this.middlerightMenu.isPointerBlocker = true
+        this.middlerightMenu.onClick = new OnPointerDown(()=>{
+            this.uiCycleData(kitchen_cabinets)
+        })
+
+
+        //Countertops
+        this.middleleftMenu = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-52.png'))
+        this.middleleftMenu.width = "10%"
+        this.middleleftMenu.height = "6%"
+        this.middleleftMenu.sourceWidth = 564
+        this.middleleftMenu.sourceHeight = 168
+        this.middleleftMenu.vAlign = "top"
+        this.middleleftMenu.positionX = "-12%"
+        this.middleleftMenu.positionY = "10%"
+        this.middleleftMenu.opacity = 1
+        this.middleleftMenu.visible = true
+        this.middleleftMenu.isPointerBlocker = true
+        this.middleleftMenu.onClick = new OnPointerDown(()=>{
+            this.uiCycleData(kitchen_countertops)
+        })
+
+        //Faucets
+        this.farrightMenu = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-53.png'))
+        this.farrightMenu.width = "10%"
+        this.farrightMenu.height = "6%"
+        this.farrightMenu.sourceWidth = 564
+        this.farrightMenu.sourceHeight = 168
+        this.farrightMenu.vAlign = "top"
+        this.farrightMenu.positionX = "24%"
+        this.farrightMenu.positionY = "10%"
+        this.farrightMenu.opacity = 1
+        this.farrightMenu.visible = true
+        this.farrightMenu.isPointerBlocker = true
+        this.farrightMenu.onClick = new OnPointerDown(()=>{
+            this.uiCycleData(kitchen_faucets)
+        })
+
+        //Backsplash
+        this.farleftMenu = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-54.png'))
+        this.farleftMenu.width = "10%"
+        this.farleftMenu.height = "6%"
+        this.farleftMenu.sourceWidth = 564
+        this.farleftMenu.sourceHeight = 168
+        this.farleftMenu.vAlign = "top"
+        this.farleftMenu.positionX = "-24%"
+        this.farleftMenu.positionY = "10%"
+        this.farleftMenu.opacity = 1
+        this.farleftMenu.visible = true
+        this.farleftMenu.isPointerBlocker = true
+        this.farleftMenu.onClick = new OnPointerDown(()=>{
+            log('No Backsplashes?')
+        })
+
+        //Lighting
+        this.farleftMenu2 = new UIImage(kitchenMenuCanvas, new Texture('imagesUI/DesignStudio_Interface/Kitchen_Catagories/KBHOMES_ChoicesUI-55.png'))
+        this.farleftMenu2.width = "10%"
+        this.farleftMenu2.height = "6%"
+        this.farleftMenu2.sourceWidth = 564
+        this.farleftMenu2.sourceHeight = 168
+        this.farleftMenu2.vAlign = "top"
+        this.farleftMenu2.positionX = "36%"
+        this.farleftMenu2.positionY = "10%"
+        this.farleftMenu2.opacity = 1
+        this.farleftMenu2.visible = true
+        this.farleftMenu2.isPointerBlocker = true
+
+        this.farleftMenu2.onClick = new OnPointerDown(()=>{
+            this.uiCycleData(kitchen_ligthing)
+        })
+    }
+
+    dynamicUIinterface(){
+        this.studioPlaceHolder1.uiImage.visible = false
+        this.studioPlaceHolder2.uiImage.visible = false
+        this.studioPlaceHolder3.uiImage.visible = false
+
+        this.studioPlaceHolder1.uiImage.width = "11%"
+        this.studioPlaceHolder1.uiImage.height = "38%"
+        this.studioPlaceHolder1.uiImage.sourceWidth = 759
+        this.studioPlaceHolder1.uiImage.sourceHeight = 1322
+        this.studioPlaceHolder1.uiImage.vAlign = "bottom"
+        this.studioPlaceHolder1.uiImage.positionX = "-12%"
+        this.studioPlaceHolder1.uiImage.positionY = "-5.5%"
+        this.studioPlaceHolder1.uiImage.opacity = 0.85
+        this.studioPlaceHolder1.uiImage.visible = true
+        this.studioPlaceHolder1.uiImage.isPointerBlocker = true
+
+        this.studioPlaceHolder1.uiImage.onClick = new OnPointerDown(()=>{
+            this.furnitureSystem(this.studioPlaceHolder1)
+        })
+
+        this.studioPlaceHolder2.uiImage.width = "11%"
+        this.studioPlaceHolder2.uiImage.height = "38%"
+        this.studioPlaceHolder2.uiImage.sourceWidth = 759
+        this.studioPlaceHolder2.uiImage.sourceHeight = 1322
+        this.studioPlaceHolder2.uiImage.vAlign = "bottom"
+        this.studioPlaceHolder2.uiImage.positionX = 0
+        this.studioPlaceHolder2.uiImage.positionY = "-5.5%"
+        this.studioPlaceHolder2.uiImage.opacity = 0.9
+        this.studioPlaceHolder2.uiImage.visible = true
+        this.studioPlaceHolder2.uiImage.isPointerBlocker = true
+
+        this.studioPlaceHolder2.uiImage.onClick = new OnPointerDown(()=>{
+            this.furnitureSystem(this.studioPlaceHolder2)
+        })
+
+        this.studioPlaceHolder3.uiImage.width = "11%"
+        this.studioPlaceHolder3.uiImage.height = "38%"
+        this.studioPlaceHolder3.uiImage.sourceWidth = 759
+        this.studioPlaceHolder3.uiImage.sourceHeight = 1322
+        this.studioPlaceHolder3.uiImage.vAlign = "bottom"
+        this.studioPlaceHolder3.uiImage.positionX = "12%"
+        this.studioPlaceHolder3.uiImage.positionY = "-5.5%"
+        this.studioPlaceHolder3.uiImage.opacity = 0.85
+        this.studioPlaceHolder3.uiImage.visible = true
+        this.studioPlaceHolder3.uiImage.isPointerBlocker = true
+
+        this.studioPlaceHolder3.uiImage.onClick = new OnPointerDown(()=>{
+            this.furnitureSystem(this.studioPlaceHolder3)
+        })
+
+        //50px = 7.5%
+
+        let interfaceBack = new UIImage(designStudioCanvas, new Texture('imagesUI/DesignStudio_Interface/Studio_Interface/KBHOMES_ChoicesUI-58.png'))
+        interfaceBack.width = "3.75%"
+        interfaceBack.height = "7.5%"
+        interfaceBack.sourceWidth = 168
+        interfaceBack.sourceHeight = 168
+        interfaceBack.vAlign = "bottom"
+        interfaceBack.positionY = "7.25%"
+        interfaceBack.positionX = "-20%"
+        interfaceBack.visible = true
+        interfaceBack.isPointerBlocker = true
+        interfaceBack.onClick = new OnPointerDown(()=>{
+            this.uiCycleBack()
+        })
+
+
+        let interfaceForward = new UIImage(designStudioCanvas, new Texture('imagesUI/DesignStudio_Interface/Studio_Interface/KBHOMES_ChoicesUI-59.png'))
+        interfaceForward.width = "3.75%"
+        interfaceForward.height = "7.5%"
+        interfaceForward.sourceWidth = 168
+        interfaceForward.sourceHeight = 168
+        interfaceForward.vAlign = "bottom"
+        interfaceForward.positionY = "7.25%"
+        interfaceForward.positionX = "20%"
+        interfaceForward.visible = true
+        interfaceForward.isPointerBlocker = true
+        interfaceForward.onClick = new OnPointerDown(()=>{
+            this.uiCycleForward()
+        }
+        )
+
+
+    }
+
+    uiCycleData(array){
+        this.arrayChoice = array
+        this.loopLength = array.length
+
+        this.studioPlaceHolder1.uiImage.visible = false
+        this.studioPlaceHolder2.uiImage.visible = false
+        this.studioPlaceHolder3.uiImage.visible = false
+
+        this.studioPlaceHolder1 = array[0]
+        this.studioPlaceHolder2 = array[1]
+        this.studioPlaceHolder3 = array[2]
+
+        this.placeHolderMin = 0 //first point in array
+        this.placeHolderMax = this.loopLength - 1 //last point in array
+
+        this.placeHolderBack = 0 //studioPlaceHolder1
+        this.placeHolderMid = 1 //studioPlaceHolder2
+        this.placeHolderFront = 2 //studioPlaceHolder3
+
+
+        this.dynamicUIinterface()
+    }
+
+    uiCycleBack(){
+        this.studioPlaceHolder1.uiImage.visible = false
+        this.studioPlaceHolder2.uiImage.visible = false
+        this.studioPlaceHolder3.uiImage.visible = false
+
+
+        log('Cycle Array Choice:')
+        log(this.arrayChoice)
+
+        log('Cycle Array Length:')
+        log(this.loopLength)
+
+        log('PlaceHolderMax:' + this.placeHolderMax)
+
+        log('cycleBackPre:')
+        log('back:' +this.placeHolderBack)
+        log('mid:' +this.placeHolderMid)
+        log('front:' +this.placeHolderFront)
+
+        if(this.placeHolderBack <= this.placeHolderMin){
+
+            this.placeHolderBack = this.placeHolderMax
+            this.placeHolderMid = this.placeHolderMid -1
+            this.placeHolderFront = this.placeHolderFront -1
+        }else{
+
+            if(this.placeHolderMid <= this.placeHolderMin){
+                    this.placeHolderMid = this.placeHolderMax
+                    this.placeHolderFront = this.placeHolderFront -1
+                    this.placeHolderBack = this.placeHolderBack -1
+
+            }else{
+        
+                    if(this.placeHolderFront <= this.placeHolderMin){
+                        this.placeHolderFront = this.placeHolderMax
+                        this.placeHolderBack = this.placeHolderBack -1
+                        this.placeHolderMid = this.placeHolderMid -1
+                    }else{
+                        this.placeHolderBack = this.placeHolderBack -1
+                        this.placeHolderMid = this.placeHolderMid -1
+                        this.placeHolderFront = this.placeHolderFront -1
+                    }
+            }
+        }
+
+        log('cycleBackPost:')
+        log('back:' +this.placeHolderBack)
+        log('mid:' +this.placeHolderMid)
+        log('front:' +this.placeHolderFront)
+
+        this.studioPlaceHolder1 = this.arrayChoice[this.placeHolderBack]
+        this.studioPlaceHolder2 = this.arrayChoice[this.placeHolderMid]
+        this.studioPlaceHolder3 = this.arrayChoice[this.placeHolderFront]
+        this.dynamicUIinterface()
+    }
+
+    uiCycleForward(){
+        this.studioPlaceHolder1.uiImage.visible = false
+        this.studioPlaceHolder2.uiImage.visible = false
+        this.studioPlaceHolder3.uiImage.visible = false
+
+        log('Cycle Array Choice forwards:')
+        log(this.arrayChoice)
+
+        log('Cycle Array Length:')
+        log(this.loopLength)
+
+        log('PlaceHolderMax:' + this.placeHolderMax)
+
+        log('cycleBackPre:')
+        log('back:' +this.placeHolderBack)
+        log('mid:' +this.placeHolderMid)
+        log('front:' +this.placeHolderFront)
+
+        if(this.placeHolderFront >= this.placeHolderMax){
+
+            this.placeHolderFront = this.placeHolderMin
+            this.placeHolderMid = this.placeHolderMid +1
+            this.placeHolderBack = this.placeHolderBack +1
+        }else{
+
+            if(this.placeHolderMid >= this.placeHolderMax){
+                    this.placeHolderMid = this.placeHolderMin
+                    this.placeHolderFront = this.placeHolderFront +1
+                    this.placeHolderBack = this.placeHolderBack +1
+
+            }else{
+        
+                    if(this.placeHolderBack >= this.placeHolderMax){
+                        this.placeHolderBack = this.placeHolderMin
+                        this.placeHolderFront = this.placeHolderFront +1
+                        this.placeHolderMid = this.placeHolderMid +1
+                    }else{
+                        this.placeHolderBack = this.placeHolderBack +1
+                        this.placeHolderMid = this.placeHolderMid +1
+                        this.placeHolderFront = this.placeHolderFront +1
+                    }
+            }
+        }
+
+        log('cycleBackPost:')
+        log('back:' +this.placeHolderBack)
+        log('mid:' +this.placeHolderMid)
+        log('front:' +this.placeHolderFront)
+
+        this.studioPlaceHolder1 = this.arrayChoice[this.placeHolderBack]
+        this.studioPlaceHolder2 = this.arrayChoice[this.placeHolderMid]
+        this.studioPlaceHolder3 = this.arrayChoice[this.placeHolderFront]
+        this.dynamicUIinterface()
+    }
+
+    furnitureTransformSetter(){
+
+        this.bathroom_faucet_holder       .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.bathroom_flooring_holder     .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.bathroom_lighting_holder     .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.bathroom_wallTile_holder     .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.kitchen_faucet_holder        .addComponent(new Transform({position: new Vector3(0,0,0)}))      
+        this.kitchen_flooring_holder      .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.kitchen_lighting_holder      .addComponent(new Transform({position: new Vector3(0,0,0)}))  
+        this.kitchen_cabinets_holder      .addComponent(new Transform({position: new Vector3(0,0,0)}))      
+        this.kitchen_countertops_holder   .addComponent(new Transform({position: new Vector3(0,0,0)}))   
+        
+        this.kitchen_sink_holder.addComponent(new Transform({position: new Vector3(0,0,0)}))
+        this.kitchen_sink_holder.addComponent(new GLTFShape('models/KB_Homes/design_studio_models/kitchen_countertops/Countertop_Sink.glb'))
+        engine.addEntity(this.kitchen_sink_holder)
+    }
+
+    furnitureSystem(uiClicked){
+
+        if(this.arrayChoice == kitchen_faucets){
+            this.bathroom_faucet_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.bathroom_faucet_holder)
+        }
+
+        if(this.arrayChoice == kitchen_flooring){
+            this.kitchen_flooring_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.kitchen_flooring_holder)
+        }
+
+        if(this.arrayChoice == kitchen_ligthing){
+            this.kitchen_lighting_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.kitchen_lighting_holder)
+        }
+
+        if(this.arrayChoice == kitchen_cabinets){
+            this.kitchen_cabinets_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.kitchen_cabinets_holder)
+        }
+
+        if(this.arrayChoice == kitchen_countertops){
+            this.kitchen_countertops_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.kitchen_countertops_holder)
+        }
+
+        if(this.arrayChoice == bathroom_faucets){
+            this.bathroom_faucet_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.bathroom_faucet_holder)
+        }
+
+        if(this.arrayChoice == bathroom_lights){
+            this.bathroom_lighting_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.bathroom_lighting_holder)
+        }
+
+        if(this.arrayChoice == bathroom_walltile){
+            this.bathroom_wallTile_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.bathroom_wallTile_holder)
+        }
+
+        if(this.arrayChoice == bathroom_flooring){
+            this.bathroom_flooring_holder.addComponentOrReplace(uiClicked.shape)
+            engine.addEntity(this.bathroom_flooring_holder)
+        }
+
+    }
+
+}
+
+
+/*
+
+The furnitureSystem shall include:
+Change/Update the GLBs
+
+
+
+*/
+
+const studio = new designStudio()
+engine.addEntity(studio)

@@ -1,0 +1,153 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Align Chrome",
+            "rotation" : [
+                0,
+                -1,
+                0,
+                1.6292068494294654e-07
+            ],
+            "scale" : [
+                0.025220200419425964,
+                0.025220200419425964,
+                0.025220200419425964
+            ],
+            "translation" : [
+                -37.9428596496582,
+                1.4610371589660645,
+                20.308732986450195
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Chrome",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.20000000298023224
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.007",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "sfekebvc_2K_Albedo",
+            "uri" : "textures/sfekebvc_2K_Albedo.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 5680,
+            "max" : [
+                4.247835636138916,
+                15.210216522216797,
+                1.1906907558441162
+            ],
+            "min" : [
+                -0.9454568028450012,
+                -3.4237802028656006,
+                -12.673439025878906
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 5680,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 5680,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 8808,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 68160,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 68160,
+            "byteOffset" : 68160,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 45440,
+            "byteOffset" : 136320,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 17616,
+            "byteOffset" : 181760,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 199376,
+            "uri" : "2345_kitchen_faucet_AlignChrome.bin"
+        }
+    ]
+}

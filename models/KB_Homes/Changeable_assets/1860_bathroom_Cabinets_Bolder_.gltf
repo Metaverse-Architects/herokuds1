@@ -1,0 +1,148 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cabinets Bolder_",
+            "rotation" : [
+                -0.5018165111541748,
+                -0.49817684292793274,
+                0.4981768727302551,
+                0.5018165707588196
+            ],
+            "translation" : [
+                -18.334997177124023,
+                1.2100002765655518,
+                22.950002670288086
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "KC_Bolder",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Box5855.009",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Bolder",
+            "uri" : "textures/Bolder.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3857,
+            "max" : [
+                2.0377864837646484,
+                7.8562421798706055,
+                10.679943084716797
+            ],
+            "min" : [
+                -1.0287121534347534,
+                -9.303230285644531,
+                5.857709884643555
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3857,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3857,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 4404,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 46284,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 46284,
+            "byteOffset" : 46284,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 30856,
+            "byteOffset" : 92568,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8808,
+            "byteOffset" : 123424,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 132232,
+            "uri" : "1860_bathroom_Cabinets_Bolder_.bin"
+        }
+    ]
+}

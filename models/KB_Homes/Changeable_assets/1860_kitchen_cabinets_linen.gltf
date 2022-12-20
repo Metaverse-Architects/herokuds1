@@ -1,0 +1,148 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Kitchen Cabinets Linen",
+            "rotation" : [
+                -0.5018165111541748,
+                -0.49817684292793274,
+                0.4981768727302551,
+                0.5018165707588196
+            ],
+            "translation" : [
+                -18.334997177124023,
+                1.2100002765655518,
+                22.950002670288086
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "KC_Linen",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Box5855.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Linen",
+            "uri" : "textures/Linen.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 12288,
+            "max" : [
+                2.079167127609253,
+                1.0499998331069946,
+                0.3657226264476776
+            ],
+            "min" : [
+                -0.9126333594322205,
+                -3.1500027179718018,
+                -8.14140796661377
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 12288,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 12288,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 12810,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 147456,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 147456,
+            "byteOffset" : 147456,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 98304,
+            "byteOffset" : 294912,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 25620,
+            "byteOffset" : 393216,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 418836,
+            "uri" : "1860_kitchen_cabinets_linen.bin"
+        }
+    ]
+}

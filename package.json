@@ -1,0 +1,35 @@
+{
+  "name": "dcl-project",
+  "version": "1.0.0",
+  "description": "My new Decentraland project",
+  "scripts": {
+    "start": "CI=true dcl start -p ${PORT:=8000}",
+    "build": "build-ecs",
+    "watch": "build-ecs --watch",
+    "ecs:install": "npm install --save-dev decentraland-ecs@latest",
+    "ecs:install-next": "npm install --save-dev decentraland-ecs@next",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "devDependencies": {
+    "@dcl/eslint-config": "^1.0.1"
+  },
+  "dependencies": {
+    "@dcl/ecs-scene-utils": "latest",
+    "@dcl/ui-scene-utils": "^1.8.4",
+    "dcldash": "^0.0.33",
+    "decentraland": "^3.14.2",
+    "decentraland-ecs": "^6.11.11",
+    "latest": "^0.2.0",
+    "next": "^13.0.7"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "bundleDependencies": [
+    "@dcl/ecs-scene-utils",
+    "@dcl/ui-scene-utils",
+    "dcldash"
+  ]
+}

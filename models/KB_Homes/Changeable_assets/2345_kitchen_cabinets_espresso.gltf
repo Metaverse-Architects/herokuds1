@@ -1,0 +1,153 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Kitchen Cabinets Epresso",
+            "rotation" : [
+                0,
+                0.70710688829422,
+                0.7071066498756409,
+                0
+            ],
+            "scale" : [
+                -0.9999998807907104,
+                -0.9999998211860657,
+                -0.9999998211860657
+            ],
+            "translation" : [
+                -39.78999328613281,
+                0.7549999952316284,
+                20.950000762939453
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "KC_Espresso",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Box7508.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "spresso",
+            "uri" : "textures/spresso.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 16039,
+            "max" : [
+                4.789997100830078,
+                0.7500042915344238,
+                0.4550020694732666
+            ],
+            "min" : [
+                -1.6100083589553833,
+                -9.050004959106445,
+                -2.474998712539673
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 16039,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 16039,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 19794,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 192468,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192468,
+            "byteOffset" : 192468,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 128312,
+            "byteOffset" : 384936,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 39588,
+            "byteOffset" : 513248,
+            "target" : 34963
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 552836,
+            "uri" : "2345_kitchen_cabinets_espresso.bin"
+        }
+    ]
+}

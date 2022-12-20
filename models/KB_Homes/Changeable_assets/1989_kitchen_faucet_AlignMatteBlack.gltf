@@ -1,0 +1,147 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_specular",
+        "KHR_materials_ior"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Align Matte Black",
+            "scale" : [
+                0.02001485787332058,
+                0.02001485787332058,
+                0.02001485787332058
+            ],
+            "translation" : [
+                -31.645389556884766,
+                1.4250231981277466,
+                19.702716827392578
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_specular" : {
+                    "specularColorFactor" : [
+                        1.259399701218953,
+                        1.259399701218953,
+                        1.259399701218953
+                    ]
+                },
+                "KHR_materials_ior" : {
+                    "ior" : 1.4500000476837158
+                }
+            },
+            "name" : "Matte Black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.17058530449867249,
+                    0.14283859729766846,
+                    0.14283859729766846,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.6010363101959229
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 5680,
+            "max" : [
+                4.247835636138916,
+                15.210216522216797,
+                1.1906907558441162
+            ],
+            "min" : [
+                -0.9454568028450012,
+                -3.4237802028656006,
+                -12.673439025878906
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 5680,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 5680,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 8808,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 68160,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 68160,
+            "byteOffset" : 68160,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 45440,
+            "byteOffset" : 136320,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 17616,
+            "byteOffset" : 181760,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 199376,
+            "uri" : "1989_kitchen_faucet_AlignMatteBlack.bin"
+        }
+    ]
+}

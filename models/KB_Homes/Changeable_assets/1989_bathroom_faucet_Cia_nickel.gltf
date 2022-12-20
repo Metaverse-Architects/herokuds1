@@ -1,0 +1,147 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_specular",
+        "KHR_materials_ior"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Align srs",
+            "scale" : [
+                0.02001485787332058,
+                0.02001485787332058,
+                0.02001485787332058
+            ],
+            "translation" : [
+                -31.409292221069336,
+                1.4250231981277466,
+                15.423444747924805
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_specular" : {
+                    "specularColorFactor" : [
+                        1.259399701218953,
+                        1.259399701218953,
+                        1.259399701218953
+                    ]
+                },
+                "KHR_materials_ior" : {
+                    "ior" : 1.4500000476837158
+                }
+            },
+            "name" : "SRS",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.5225161910057068,
+                    0.5007557272911072,
+                    0.43868687748908997,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5492228269577026
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 23026,
+            "max" : [
+                720.879150390625,
+                15.210216522216797,
+                658.53857421875
+            ],
+            "min" : [
+                -63.7843017578125,
+                -3.423787832260132,
+                -12.673439025878906
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 23026,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 23026,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 35232,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 276312,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 276312,
+            "byteOffset" : 276312,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 184208,
+            "byteOffset" : 552624,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 70464,
+            "byteOffset" : 736832,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 807296,
+            "uri" : "1989_bathroom_faucet_Cia_nickel.bin"
+        }
+    ]
+}

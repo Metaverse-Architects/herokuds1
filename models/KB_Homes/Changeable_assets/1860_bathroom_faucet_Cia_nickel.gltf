@@ -1,0 +1,153 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_specular",
+        "KHR_materials_ior"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cia.002",
+            "rotation" : [
+                -0.7071068286895752,
+                0,
+                0,
+                0.7071067094802856
+            ],
+            "scale" : [
+                -0.034405242651700974,
+                -0.03440524637699127,
+                -0.03440524637699127
+            ],
+            "translation" : [
+                -24.303558349609375,
+                1.4824936389923096,
+                31.46389389038086
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_specular" : {
+                    "specularColorFactor" : [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                "KHR_materials_ior" : {
+                    "ior" : 1.4500000476837158
+                }
+            },
+            "name" : "Cia_brushed_Nickel.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.42326778173446655,
+                    0.3813260495662689,
+                    0.29613831639289856,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.6000000238418579
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.045",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 7669,
+            "max" : [
+                7.221996307373047,
+                1.0000001192092896,
+                3.401172161102295
+            ],
+            "min" : [
+                -1.000002384185791,
+                -462.3927307128906,
+                -7.499234199523926
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 7669,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 7669,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 26172,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 92028,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 92028,
+            "byteOffset" : 92028,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 61352,
+            "byteOffset" : 184056,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 52344,
+            "byteOffset" : 245408,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 297752,
+            "uri" : "1860_bathroom_faucet_Cia_nickel.bin"
+        }
+    ]
+}

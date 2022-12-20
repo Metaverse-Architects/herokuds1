@@ -1,0 +1,293 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Dianna Satin Brass",
+            "rotation" : [
+                0,
+                -0.7071068286895752,
+                0,
+                0.7071067094802856
+            ],
+            "translation" : [
+                -37.009117126464844,
+                4.046267032623291,
+                24.76974868774414
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Lamp_material_bronze",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.5237847566604614,
+                    0.44751185178756714,
+                    0.31772446632385254,
+                    1
+                ],
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Lamp_white_plaqstic",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1
+                ],
+                "metallicFactor" : 0
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "Lightball",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.4019657075405121,
+                    0.4019657075405121,
+                    0.4019657075405121,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Torus.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 2
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 18115,
+            "max" : [
+                1.1889573335647583,
+                0.4529043734073639,
+                0.19257068634033203
+            ],
+            "min" : [
+                -1.1945300102233887,
+                -0.655297577381134,
+                -0.18550994992256165
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 18115,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 18115,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 80802,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 552,
+            "max" : [
+                1.0150891542434692,
+                -0.4930799901485443,
+                0.07516764849424362
+            ],
+            "min" : [
+                -1.0202383995056152,
+                -0.5783668160438538,
+                -0.07143715769052505
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 552,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 552,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 1260,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 2538,
+            "max" : [
+                1.0150948762893677,
+                -0.4309018552303314,
+                0.07492922991514206
+            ],
+            "min" : [
+                -1.0201010704040527,
+                -0.501552402973175,
+                -0.07102898508310318
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 2538,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 2538,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 12960,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 217380,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 217380,
+            "byteOffset" : 217380,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144920,
+            "byteOffset" : 434760,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 161604,
+            "byteOffset" : 579680,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6624,
+            "byteOffset" : 741284,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6624,
+            "byteOffset" : 747908,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4416,
+            "byteOffset" : 754532,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2520,
+            "byteOffset" : 758948,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 30456,
+            "byteOffset" : 761468,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 30456,
+            "byteOffset" : 791924,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 20304,
+            "byteOffset" : 822380,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 25920,
+            "byteOffset" : 842684,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 868604,
+            "uri" : "2345_kitchen_Light_DiannaSatinBrass.bin"
+        }
+    ]
+}

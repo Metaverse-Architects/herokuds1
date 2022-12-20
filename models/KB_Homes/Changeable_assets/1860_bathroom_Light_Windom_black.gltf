@@ -1,0 +1,210 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Lamp_black",
+            "rotation" : [
+                1,
+                0,
+                0,
+                0
+            ],
+            "scale" : [
+                -0.4976464509963989,
+                -0.4976464509963989,
+                -0.4976464509963989
+            ],
+            "translation" : [
+                -24.316972732543945,
+                3.415235996246338,
+                16.19663429260254
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Lamp_black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "white",
+            "pbrMetallicRoughness" : {
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.036",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 1833,
+            "max" : [
+                0.16101253032684326,
+                0.20727956295013428,
+                1.039832353591919
+            ],
+            "min" : [
+                -0.36421239376068115,
+                -0.33572113513946533,
+                -1.059190273284912
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 1833,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 1833,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 3864,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 1648,
+            "max" : [
+                0.24909472465515137,
+                0.483140230178833,
+                1.0089024305343628
+            ],
+            "min" : [
+                -0.1708660125732422,
+                0.010231077671051025,
+                -1.0069093704223633
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 1648,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 1648,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 3852,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 21996,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 21996,
+            "byteOffset" : 21996,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 14664,
+            "byteOffset" : 43992,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7728,
+            "byteOffset" : 58656,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19776,
+            "byteOffset" : 66384,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 19776,
+            "byteOffset" : 86160,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 13184,
+            "byteOffset" : 105936,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7704,
+            "byteOffset" : 119120,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 126824,
+            "uri" : "1860_bathroom_Light_Windom_black.bin"
+        }
+    ]
+}
